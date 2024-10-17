@@ -18,13 +18,15 @@ addNumbers(5,10);
 addNumbers(25,10);
 
 function displayReceipt(totalDue, amountPaid){
-    const changeDue = totalDue - amountPaid;
+    let changeDue = totalDue - amountPaid;
+    let owed = totalDue - amountPaid;
     console.log(`${totalDue} - ${amountPaid} = ${changeDue}`)
-    if(amountPaid > totalDue){
-        console.log("You need to pay more!")
+    if(amountPaid < totalDue){
+        console.log(`You need to pay ${owed} more`)
     }
 }
 
-displayReceipt(50,46);
+displayReceipt(46,50);
 displayReceipt(46,46);
-displayReceipt(45,46);
+displayReceipt(46,45);
+displayReceipt(46,40);
